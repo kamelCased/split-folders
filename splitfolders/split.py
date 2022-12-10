@@ -50,7 +50,7 @@ except ImportError:
 def check_input_format(input):
     p_input = Path(input)
     if not p_input.exists():
-        err_msg = f'The provided input folder "{input}" does not exists.'
+        err_msg = f'The provided input folder "{input}" does not exist.'
         if not p_input.is_absolute():
             err_msg += f' Your relative path cannot be found from the current working directory "{Path.cwd()}".'
         raise ValueError(err_msg)
